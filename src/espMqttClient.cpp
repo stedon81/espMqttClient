@@ -77,11 +77,6 @@ espMqttClientSecure::espMqttClientSecure(uint8_t priority, uint8_t core)
   _transport = &_client;
 }
 
-espMqttClientSecure& espMqttClientSecure::setInsecure() {
-  _client.client.setInsecure();
-  return *this;
-}
-
 espMqttClientSecure& espMqttClientSecure::setCACert(const char* rootCA) {
   _client.client.setCACert(rootCA);
   return *this;

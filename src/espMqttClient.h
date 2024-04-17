@@ -58,7 +58,6 @@ class espMqttClientSecure : public MqttClientSetup<espMqttClientSecure> {
  public:
   explicit espMqttClientSecure(espMqttClientTypes::UseInternalTask useInternalTask);
   explicit espMqttClientSecure(uint8_t priority = 1, uint8_t core = 1);
-  espMqttClientSecure& setInsecure();
   espMqttClientSecure& setCACert(const char* rootCA);
   espMqttClientSecure& setCertificate(const char* clientCa);
   espMqttClientSecure& setPrivateKey(const char* privateKey);

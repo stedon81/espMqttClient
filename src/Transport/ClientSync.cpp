@@ -26,7 +26,7 @@ bool ClientSync::connect(IPAddress ip, uint16_t port) {
     #elif defined(ARDUINO_ARCH_ESP32)
     // Set TCP option directly to bypass lack of working setNoDelay for WiFiClientSecure (for consistency also here)
     int val = true;
-    client.setSocketOption(IPPROTO_TCP, TCP_NODELAY, &val, sizeof(int));
+    client.setSocketOption(TCP_NODELAY, (char*)&val, sizeof(int));
     #endif
   }
   return ret;
@@ -40,7 +40,7 @@ bool ClientSync::connect(const char* host, uint16_t port) {
     #elif defined(ARDUINO_ARCH_ESP32)
     // Set TCP option directly to bypass lack of working setNoDelay for WiFiClientSecure (for consistency also here)
     int val = true;
-    client.setSocketOption(IPPROTO_TCP, TCP_NODELAY, &val, sizeof(int));
+    client.setSocketOption(TCP_NODELAY, (char*)&val, sizeof(int));
     #endif
   }
   return ret;
