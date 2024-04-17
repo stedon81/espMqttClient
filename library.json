@@ -4,15 +4,15 @@
   "description": "an MQTT client for the Arduino framework for ESP8266 / ESP32",
   "authors":
   {
-    "name": "Bert Melis",
-    "url": "https://github.com/bertmelis"
+    "name": "Stefan Donath",
+    "url": "https://github.com/stedon81"
   },
   "license": "MIT",
-  "homepage": "https://github.com/bertmelis/espMqttClient",
+  "homepage": "https://github.com/stedon81/espMqttClient",
   "repository":
   {
     "type": "git",
-    "url": "https://github.com/bertmelis/espMqttClient.git"
+    "url": "https://github.com/stedon81/espMqttClient.git"
   },
   "version": "1.6.0",
   "frameworks": "arduino",
