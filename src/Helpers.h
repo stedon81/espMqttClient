@@ -29,7 +29,7 @@ the LICENSE file.
     #define EMC_SEMAPHORE_TAKE()
     #define EMC_SEMAPHORE_GIVE()
   #endif
-  #define EMC_GET_FREE_MEMORY() ESP.getMaxFreeBlockSize()
+  #define EMC_GET_FREE_MEMORY() ESP.getFreeHeap() //ESP.getMaxFreeBlockSize()
   // no need to yield for ESP8266, the Arduino framework does this internally
   // yielding in async is forbidden (will crash)
   #define EMC_YIELD()
